@@ -55,3 +55,49 @@ CREATE TABLE users (
 
 
 *ip addresses and domain names*
+
+IP ADDRESS --> A number that uniquely identifies a device on a network --> two types : ipv4 and ipv6 ipv4 example --> 202.181.101.100 domain name -> a human friendly name for an ip address e.g. https://www.google.com
+
+Internet --> global interconnection of devices world wide www --> a service that lets you connect to the internet via a browser
+
+http -> hypertext transafer protocol -> standard communication protocol for the browser -> sends data as raw text
+
+https -> hypertext transafer protocol secure -> same as http but now data is encrypted -> switch from http to https using an ssl / tls certificate
+
+plan ---> develop ---> test ---> deploy apps(cloud)
+
+ipv4 --> 2^32 https://meet.google.com/meet/dsh-idtb-oqb
+
+person A -------> 10000 ------> Netflix
+
+person A ------> 10000-> encrypted --> s00dj99eh89de993hd89sjhds99sh ---> Netflix ---> decrypt back to 10000
+
+127.0.0.1 ---> ip address of your local device localhost ---> domain name for 127.0.0.1
+
+How to perform db operations with psycopg2 cur -> an object that is used to perfom db operations(select, insert, update , delete) cur.execute() -> a function / method for executing sql queries cur.fetchall() ---> retrieves or fetches data from Postgres to Python
+
+---> data fetched from cur.fetchall() is retrieved as a list of tuples
+
+list ---> entire dataset tuple ---> a single row of data
+
+(1, 'milk', Decimal('50.00'), Decimal('60.00'))
+
+conn.commit() ---> save my data / changes in the database
+
+task ---> insert 2 sales data using psycopg2 ---> fetch that sales data and display it on your terminal w/psycopg2
+
+--> making insert functions reusable : let it take parameters
+
+let the insert functions take a single param of a tuple -> the tuple then contains prod details / sale details
+
+%s -> placeholder for a column --> the no of placeholders must match the no of columns specified
+
+fetching complex data --> fetching data from more than one table
+
+sales per product --> selling_price(products) --> quantity (sales) --> name(products) selling_price * quantity per product name
+
+select products.name as p_name,sum(products.selling_price * sales.quantity) as total_sales from sales join products on products.id = sales.pid group by p_name;
+
+multiline strings ---> allow us to write strings that traverse more than one line ---> they use tripple opening and closing quotes(single or double) """ """ or ''' '''
+
+Task 1.write a function to fetch stock data with psycopg2 2.write a function that can insert any stock data using parameters with psycopg2 3.write functions that use psycopg2 to get the following data: -> sales per day -> profit per product -> profit per day
