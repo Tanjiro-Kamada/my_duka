@@ -165,3 +165,12 @@ https://www.safaricom.co.ke/
 task ---> create the following routes : /stock ,/dashboaard, /register , /login
 
 returning full html pages
+N/B: Every view function in a route must have a unique name
+
+returning full html pages --> Instead of rendering a single piece of data , we should instead return full html pages and then render as much content as we want in those html pages ---> To do this we need to have our project structure as follows:
+
+static :contains all static files to be rendered with flask e.g. css, js, images , videos, icons, favicons templates : contains all html files to be rendered with Flask --> index.html --> products.html --> sales.html --> stock.html --> dashboard.html --> register.html --> login.html
+
+database.py main.py
+
+---> To render html files in Flask we use a function imported from flask called render_template() template --> a single html file
