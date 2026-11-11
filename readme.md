@@ -101,3 +101,67 @@ select products.name as p_name,sum(products.selling_price * sales.quantity) as t
 multiline strings ---> allow us to write strings that traverse more than one line ---> they use tripple opening and closing quotes(single or double) """ """ or ''' '''
 
 Task 1.write a function to fetch stock data with psycopg2 2.write a function that can insert any stock data using parameters with psycopg2 3.write functions that use psycopg2 to get the following data: -> sales per day -> profit per product -> profit per day
+
+OOP ---> Object Oriented Programming
+
+---> Python has 2 categories of data types: 1.Inbuilt / Primitve data types --> int, str, bool, list, tuple, dict -->come with the programming language 2.User defined data types ---> custom data types created by the developer using classes and objects
+
+OOP ---> a concept / paradigm in programming whereby programs are built around classes and objects
+
+class ---> a template / blueprint for creating objects ---e.g class Person ---> name , age , id no, email,address, nationality class Laptop --->ram , rom, processor, I/O , BIOS object -> an instance of a class ---> Kim, 23
+
+Objects and classes have an IS A relationship
+
+--> Every class is defined by the following 3 things: 1.Identity ---> unique name of the class 2.State ---> represented by attributes --> what does a class have? attribute --> a variable in a class 3.Behaviour ---> represented by methods ---<> what can a class do? --->method ---> a function inside a class
+
+class Person 1.Identity ---> Person 2.State ----> name, age, id no , is_student,email 3.Behaviour --> sleep, read, eat , work , travel, drive
+
+class Horse class Teacher
+
+OOP object class attribute methods inheritance self encapsulation abstraction polymorphism ---> method overloading
+
+INTRODUCTION TO FLASK framework vs library
+
+Approach 1 ---> framework Approach 2 ---> library
+
+framework ---> collection prebuilt tools and code meant to help developers build applications easily without having to build from scratch but it requires them to follow very strict guidelines set by the framework
+
+Examples of frameworks:
+
+Python -> Flask, FastAPI, Django
+JS --> React , Angular , Vue , Svelte
+PHP --> Laravel
+Java ---> Spring
+Go ---> Gin, Chi
+C# ---> .NET
+Ruby ---> Ruby on Rails
+Rust --> Tokio
+Routing in Flask ---> Routing : a mechanism that maps / connects URLs to functions ---> It is a system for resource navigation ---> Routing in flask is enabled by a function called decorator function
+
+URL ---> The full address used to access an application or a resource e.g. https://meet.google.com/meet/dsh-idtb-oqb parts of a url
+
+Scheme / Protocol ---> http or https
+Domain name ---> meet.google.com
+Path --> specific resource to be accessed when using an application e.g /dsh-idtb-oqb
+Port ---> :5432, :5500 , :3000, decorator function --> A function that determines or modifies the behaviour of another function ---> In Python , they are usually preceded with the prefix '@' ---> Our decorator function for routing is called @app.route() which can take 2 arguments:
+Path
+Methods
+view function ---> a function meant to return data / response to a user
+
+@app.route('/'). ---> decorator function def home(): ----> view function return "Hello World". ---> data to be returned
+
+@app.route('/products') def products(): return "Products Page"
+
+@app.route('/sales) def sales(): return "Sales page"
+
+app.run() ---> starts a minimal server to run your application
+
+www.jumia.com/sales ---> @app.route()
+
+name index route ---> default route for a landing page ---> /
+
+https://www.safaricom.co.ke/
+
+task ---> create the following routes : /stock ,/dashboaard, /register , /login
+
+returning full html pages
